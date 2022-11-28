@@ -15,7 +15,6 @@ html
 body {
   font-family: "Uber Move Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
-  line-height: 2.4rem;
 }
 a {
   text-decoration: none;
@@ -26,10 +25,17 @@ img {
   height: auto;
 }
 .wrapper {
+  margin: auto;
   width: 100%;
   max-width: 1340px;
+
   margin: auto;
   padding: 1.2rem 2.4rem;
+}
+.icon {
+  display: block;
+  width: 2.4rem;
+  height: 2.4rem;
 }
 /* svg {
   height: 40px;
@@ -37,6 +43,18 @@ img {
 } */
 
 /* UTILITIES */
+/* buttons */
+.button {
+  display: inline-block;
+  background-color: black;
+  color: white;
+  padding: 1.4rem 2.5rem;
+  border-radius: 1rem;
+  font-size: 1.6rem;
+}
+.button:hover {
+  background-color: #333;
+}
 /* nav-bar button */
 .button-nav {
   transition-property: background-color;
@@ -64,8 +82,19 @@ img {
   margin: 0 .8rem;
   font-weight: 500;
 }
+/* font sizes */
+.font-large {
+  font-size: 3.6rem;
+}
+.font-medium {
+  font-size: 1.6rem;
+}
+.font-small {
+  font-size: 1.4rem;
+}
 
-/* NavBar */
+
+/* NAVBAR */
 nav {
   background-color: black;
 }
@@ -95,16 +124,81 @@ nav li {
   margin-right: 1.2rem;
 }
 
-/* Showcase */
+/* SHOWCASE */
 .showcase {
   position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.showcase .wrapper {
+  position: absolute;
   height: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-around; 
+  align-items: center;
 }
 .showcase-image {
-  position: absolute;
+  position: relative;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
+  z-index: -1;
+}
+.box-imaginary {
+  flex-basis: 57.6rem;
+}
+.box-content {
+  flex-basis: 57.6rem;
+  background-color: white;
+  min-height: 65rem;
+  display: flex;
+  flex-direction: column;  
+}
+.inner-box-1 {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  border-bottom: lightgray solid 1px;
+}
+.inner-box-1 div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.8rem 1.2rem 2rem;
+}
+.inner-box-1 div p {
+  height: 3.2rem;
+  margin-top: 0.8rem;
+  font-weight: 500;
+  
+}
+.inner-box-2 {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 4.8rem;
+}
+.inner-box-2 h2 {
+  font-size: 5.2rem;
+}
+.inner-box-2 .meer-informatie {
+  color: black;
+  padding-bottom: 0.5rem;
+  border-bottom: lightgray solid 1px;
 }
 
+
+
+
+
+
+/* UBER BUSINESS */
+.uber-business {
+  height: 30rem;
+  background: url();
+}
