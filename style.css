@@ -28,7 +28,6 @@ img {
   margin: auto;
   width: 100%;
   max-width: 1280px;
-
   margin: auto;
   padding: 1.2rem 2.4rem;
 }
@@ -119,6 +118,7 @@ nav ul {
   display: flex;
   justify-content: center;
   font-weight: 500;
+  line-height: 3rem;
 }
 nav li {
   margin: 0 0.3rem;
@@ -136,19 +136,19 @@ nav li {
 }
 .hamburger-menu {
   display: none;
-  padding-right: 0;
+  padding-left: 0;
 }
 .hamburger-menu li{
-  padding: 0;
+padding: 0;
 }
 .hamburger-menu > div {
   width: 3rem;
-  height: 1.5rem;
-  padding-top: 0.5rem;
+  height: 1.5rem; 
 }
 .hamburger-menu > div > div {
   width: 1.6rem;
   height: 0.8rem;
+  margin: 1rem auto;
   border-top: 2px solid white;
   border-bottom: 2px solid white;
 }
@@ -209,16 +209,16 @@ nav li {
 .inner-box-2 h2 {
   font-size: 5.2rem;
 }
+.showcase-aanmelden {
+  display: flex;
+  flex-direction: column;
+  row-gap: 4rem;
+}
 .inner-box-2 .meer-informatie {
   color: black;
   padding-bottom: 0.5rem;
   border-bottom: lightgray solid 2px;
 }
-
-
-
-
-
 
 /* UBER BUSINESS */
 .uber-business {
@@ -364,7 +364,6 @@ footer .wrapper a {
 }
 .footer-grid-3 div{
   grid-column: span 6;
-
 }
 .footer-grid-3 div:nth-child(2),
 .footer-grid-3 div:nth-child(3) {
@@ -391,10 +390,9 @@ footer .wrapper a {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #AFAFAF;
+  column-gap: 2rem;
 }
 .footer-grid-4 div p a{
-  margin-left: 2rem;
   color: #AFAFAF;
 }
 .footer-grid-4 div p a:hover {
@@ -413,6 +411,7 @@ footer .wrapper a {
 
 /* part 1 */
 @media screen and (max-width:1136px) {
+  /* navbar */
   .nav-bedrijf {
     display: none;
   }
@@ -425,12 +424,11 @@ footer .wrapper a {
   .hamburger-menu {
     display: block;
   }
-  
+  /* showcase */
   .showcase-image {
     display: block;
   }
   .showcase .wrapper {
-    /* width: 100vw; */
     padding: 0;
   }
   .box-imaginary {
@@ -455,15 +453,19 @@ footer .wrapper a {
   .inner-box-2 {
     padding: 3.2rem;
   } 
-  /* .inner-box-2 > div:last-child {
-    background-color: red;
-  } */
+  .showcase-aanmelden {
+    flex-direction: row;
+    column-gap: 2rem;
+    align-items: center;
+  }
+  /* uber-business */
   .uber-business .wrapper {
     padding: 5.6rem 3.2rem;
   }
   .uber-business h2 {
     font-size: 3.2rem;
   }
+  /* safety */
   .safety .wrapper {
     padding: 5.6rem 3.2rem;
   }
@@ -472,13 +474,15 @@ footer .wrapper a {
     display:block;
     margin: 1rem 0;
   }
+  /* about */
   .about .wrapper {
     padding: 5.6rem 3.2rem;
     column-gap: 4rem;
   }
   .about .wrapper .about-info {
-    flex-basis: 48%;
+    flex-basis: 45%;
   }
+  /* footer */
   footer .wrapper {
     padding: 5.6rem 3.2rem;
   }
@@ -495,7 +499,6 @@ footer .wrapper a {
   }
   .footer-grid-3 div{
     grid-column: 1 / -1;
-
   }
   .footer-grid-3 div:nth-child(2),
   .footer-grid-3 div:nth-child(3) {
@@ -522,13 +525,20 @@ footer .wrapper a {
 }
 
 /* part 2 */
-@media screen and (max-width:600px) {   
+@media screen and (max-width:600px) { 
+  /* showcase  */
   .inner-box-2 {
     padding: 2.4rem;
   }
   .inner-box-2 h2 {
     font-size: 3.6rem;
   }
+  .showcase-aanmelden {
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 2rem;
+  }
+  /* uber-business */
   .uber-business {
     height: 24rem;
   }
@@ -538,6 +548,7 @@ footer .wrapper a {
   .uber-business h2 {
     font-size: 2.8rem;
   }
+  /* safety */
   .safety .wrapper {
     padding: 4rem 2.4rem;
     display: grid;
@@ -555,14 +566,14 @@ footer .wrapper a {
   .grid-text-1 {
     grid-row: 3 / auto;
   }
-
+  /* about */
   .about .wrapper {
     padding: 4rem 2.4rem;
   }
   .about .wrapper .about-info {
     flex-basis: 100%;
   }
-
+  /* footer */
   footer .wrapper {
     padding: 4rem 2.4rem;
   }
@@ -574,6 +585,9 @@ footer .wrapper a {
 
 /* part 3 */
 @media screen and (max-width:320px){
+  .inner-box-2 .meer-informatie {
+    line-height: 3rem;
+  }
   .footer-social-media {
     font-size: 0.8rem;
   }
