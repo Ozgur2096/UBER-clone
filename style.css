@@ -405,6 +405,9 @@ footer .wrapper a {
   flex-direction: column;
   line-height: 6rem;
 }
+.footer-grid-1 > div:nth-child(2) > p {
+  line-height: 2.2rem;
+}
 
 /* MEDIA QUERIES */
 
@@ -465,7 +468,7 @@ footer .wrapper a {
     padding: 5.6rem 3.2rem;
   }
   .safety .inline-to-block{
-    width: 25rem;
+    width: max-content;
     display:block;
     margin: 1rem 0;
   }
@@ -519,7 +522,59 @@ footer .wrapper a {
 }
 
 /* part 2 */
-@media screen and (max-width:600px)
-{
-  
+@media screen and (max-width:600px) {   
+  .inner-box-2 {
+    padding: 2.4rem;
+  }
+  .inner-box-2 h2 {
+    font-size: 3.6rem;
+  }
+  .uber-business {
+    height: 24rem;
+  }
+  .uber-business .wrapper {
+    padding: 4rem 2.4rem;
+  }
+  .uber-business h2 {
+    font-size: 2.8rem;
+  }
+  .safety .wrapper {
+    padding: 4rem 2.4rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 0;
+  }
+  .safety .wrapper h2 {
+    font-size: 2.8rem;
+  }
+  .safety .inline-to-block{
+    width: max-content;
+    display:block;
+    margin: 1rem 0;
+  }
+  .grid-text-1 {
+    grid-row: 3 / auto;
+  }
+
+  .about .wrapper {
+    padding: 4rem 2.4rem;
+  }
+  .about .wrapper .about-info {
+    flex-basis: 100%;
+  }
+
+  footer .wrapper {
+    padding: 4rem 2.4rem;
+  }
+  .footer-grid-2 {
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 4rem;
+  }
+}
+
+/* part 3 */
+@media screen and (max-width:320px){
+  .footer-social-media {
+    font-size: 0.8rem;
+  }
 }
