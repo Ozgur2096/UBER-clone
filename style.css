@@ -22,12 +22,12 @@ a {
 }
 img {
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 .wrapper {
   margin: auto;
   width: 100%;
-  max-width: 1340px;
+  max-width: 1280px;
 
   margin: auto;
   padding: 1.2rem 2.4rem;
@@ -108,6 +108,7 @@ nav {
   background-color: black;
 }
 nav .wrapper {
+  max-width: 1328px;
   display: flex;
   justify-content: space-between;
   height: 6.4rem;
@@ -133,29 +134,40 @@ nav li {
   margin-right: 1.2rem;
   color: #FFF;
 }
+.hamburger-menu {
+  display: none;
+  padding-right: 0;
+}
+.hamburger-menu li{
+  padding: 0;
+}
+.hamburger-menu > div {
+  width: 3rem;
+  height: 1.5rem;
+  padding-top: 0.5rem;
+}
+.hamburger-menu > div > div {
+  width: 1.6rem;
+  height: 0.8rem;
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+}
 
 /* SHOWCASE */
 .showcase {
-  position: relative;
   display: flex;
   flex-direction: column;
+  background: url(./uber-images/DotCom_Update_Earner_bg2x.jpg) no-repeat center center/cover;
 }
 .showcase .wrapper {
-  position: absolute;
+  padding: 6.4rem;
   height: 100%;
-  left: 50%;
-  transform: translateX(-50%);
   display: flex;
   justify-content: space-around; 
   align-items: center;
 }
-.showcase-image {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: -1;
+.showcase-image{
+  display: none;
 }
 .box-imaginary {
   flex-basis: 57.6rem;
@@ -163,7 +175,6 @@ nav li {
 .box-content {
   flex-basis: 57.6rem;
   background-color: white;
-  min-height: 65rem;
   display: flex;
   flex-direction: column;  
 }
@@ -171,19 +182,20 @@ nav li {
   display: flex;
   justify-content: space-around;
   text-align: center;
-  border-bottom: lightgray solid 2px;
+  border-bottom:solid 1px rgb(230 230 230);
 }
 .inner-box-1 div {
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 12.2rem;
+  width: 10.5rem;
   padding: 2.8rem 1.2rem 2rem;
 }
 .inner-box-1 div p {
   height: 3.2rem;
   margin-top: 0.8rem;
   font-weight: 500;
-  
 }
 .inner-box-2 {
   width: 100%;
@@ -191,6 +203,7 @@ nav li {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  row-gap: 3.8rem;
   padding: 4.8rem;
 }
 .inner-box-2 h2 {
@@ -226,23 +239,19 @@ nav li {
   padding: 6.4rem;
   height: 100%;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(11, 1fr);
+  grid-template-columns: repeat(12, 1fr);
   gap: 3.6rem;
 }
 .safety .wrapper h2 {
-  grid-column: 1 / span 2;
-  grid-row: 1 / span 2;
-  align-self: end;
+  grid-column: 1 / -1;
 }
 .image-1, 
 .image-2 {
-  grid-row: 3/ 9;
+  grid-column: span 6;
 }
 .grid-text-1,
 .grid-text-2 {
-  grid-row: 9/ 12;
-  justify-self: end;
+ grid-column: span 6;
 }
 .grid-text-1 a,
 .grid-text-2 a {
@@ -265,7 +274,7 @@ nav li {
   flex-wrap: wrap;
   gap: 1.5rem;
 }
-.about .wrapper div {
+.about .wrapper .about-info {
   flex-basis: 31%;
 }
 .about a {
@@ -395,4 +404,122 @@ footer .wrapper a {
   display: flex;
   flex-direction: column;
   line-height: 6rem;
+}
+
+/* MEDIA QUERIES */
+
+/* part 1 */
+@media screen and (max-width:1136px) {
+  .nav-bedrijf {
+    display: none;
+  }
+  .uber-logo {
+    font-size: 2rem;
+  }
+  .nav-right li:first-child, .nav-right li:nth-child(2) {
+    display: none;
+  }
+  .hamburger-menu {
+    display: block;
+  }
+  
+  .showcase-image {
+    display: block;
+  }
+  .showcase .wrapper {
+    /* width: 100vw; */
+    padding: 0;
+  }
+  .box-imaginary {
+    display: none;
+  }
+  .box-content {
+    flex-basis:auto;
+  }
+  .inner-box-1 {
+    justify-content: left;
+  }
+  .inner-box-1 img {
+    height: 1.8rem;
+    width: 1.8rem;
+  }
+  .inner-box-2 h2 {
+    font-size: 4.4rem;
+  }
+  .inner-box-2 p {
+    font-size: 1.6rem;
+  }
+  .inner-box-2 {
+    padding: 3.2rem;
+  } 
+  /* .inner-box-2 > div:last-child {
+    background-color: red;
+  } */
+  .uber-business .wrapper {
+    padding: 5.6rem 3.2rem;
+  }
+  .uber-business h2 {
+    font-size: 3.2rem;
+  }
+  .safety .wrapper {
+    padding: 5.6rem 3.2rem;
+  }
+  .safety .inline-to-block{
+    width: 25rem;
+    display:block;
+    margin: 1rem 0;
+  }
+  .about .wrapper {
+    padding: 5.6rem 3.2rem;
+    column-gap: 4rem;
+  }
+  .about .wrapper .about-info {
+    flex-basis: 48%;
+  }
+  footer .wrapper {
+    padding: 5.6rem 3.2rem;
+  }
+  .footer-grid-1 div:first-child{
+    grid-column: 1 / -1;
+  }
+  .footer-grid-1 div:nth-child(2) {
+    grid-column: 1 / -1;
+    justify-self: auto;
+  }
+  .footer-grid-2 {
+    grid-template-columns: repeat(8, 1fr);
+    row-gap: 4rem;
+  }
+  .footer-grid-3 div{
+    grid-column: 1 / -1;
+
+  }
+  .footer-grid-3 div:nth-child(2),
+  .footer-grid-3 div:nth-child(3) {
+    grid-column: 1 / -1;
+    justify-self: flex-start;
+  }
+  .app-logo {
+    justify-content: flex-start;
+  }
+  .footer-grid-3 div:nth-child(2) > a {
+    display: block;
+  }
+  .footer-grid-4 {
+    padding: 0;
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 3rem;
+  }
+  .footer-grid-4 div p a{
+    margin-left: 0;
+  }
+}
+
+/* part 2 */
+@media screen and (max-width:600px)
+{
+  
 }
